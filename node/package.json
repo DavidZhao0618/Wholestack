@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "iconv-lite": "^0.5.1",
+    "mysql2": "^2.1.0",
+    "request": "^2.88.2",
+    "sequelize": "^5.21.5"
+  }
+}

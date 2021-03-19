@@ -25,7 +25,7 @@ const server = http.createServer((req, res) => {
             'Content-Type': 'application/json'
         })
         res.end(JSON.stringify({
-            name: 'zhaozz'
+            name: 'jack'
         }))
     }else if(method==='GET'&&headers.accept.indexOf('image/*')!==-1){
         console.log(url);

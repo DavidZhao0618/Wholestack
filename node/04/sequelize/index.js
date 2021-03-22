@@ -1,7 +1,7 @@
 (async ()=>{
     const Sequelize = require('sequelize');
     //建立连接
-    const sequelize=new Sequelize('test','zhaozz','zhaozz',{
+    const sequelize=new Sequelize('test','root','123456',{
         host:'localhost',
         dialect:'mysql'
     })
@@ -24,6 +24,8 @@
         name:'香蕉',
         price:3.5
     })
+    console.log('create',ret)
+
     ret = await Fruit.findAll()
     console.log('findall',JSON.stringify(ret));
 
@@ -33,7 +35,7 @@
     
     const Op=Sequelize.Op;
     ret = await Fruit.findAll({
-        where:{price:{[Op.lt]:5,[Op.gt]:2}}
+        where:{price:{[Op.lt]:5,[Op.gt]:2}} // 价格在2-5之间
     })
     console.log('ret',JSON.stringify(ret));
     
